@@ -1,0 +1,181 @@
+export const products = [
+  {
+    name: "Red Bench",
+    category: "people",
+    price: 3.89,
+    currency: "USD",
+    dimmentions: {
+      width: 3933,
+      height: 5891,
+    },
+    size: 10000,
+    image: {
+      src: "https://images.pexels.com/photos/9507099/pexels-photo-9507099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Black and White Floral Padded Brown Wooden Framed Armchair",
+    },
+    bestseller: true,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Red Bench",
+    category: "people",
+    price: 3.89,
+    currency: "USD",
+    dimmentions: {
+      width: 3933,
+      height: 5891,
+    },
+    size: 10000,
+    image: {
+      src: "https://images.pexels.com/photos/9507099/pexels-photo-9507099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Black and White Floral Padded Brown Wooden Framed Armchair",
+    },
+    bestseller: true,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Red Bench",
+    category: "people",
+    price: 3.89,
+    currency: "USD",
+    dimmentions: {
+      width: 3933,
+      height: 5891,
+    },
+    size: 10000,
+    image: {
+      src: "https://images.pexels.com/photos/9507099/pexels-photo-9507099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Black and White Floral Padded Brown Wooden Framed Armchair",
+    },
+    bestseller: true,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Red Bench",
+    category: "people",
+    price: 3.89,
+    currency: "USD",
+    dimmentions: {
+      width: 3933,
+      height: 5891,
+    },
+    size: 10000,
+    image: {
+      src: "https://images.pexels.com/photos/9507099/pexels-photo-9507099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Black and White Floral Padded Brown Wooden Framed Armchair",
+    },
+    bestseller: true,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Red Bench",
+    category: "people",
+    price: 3.89,
+    currency: "USD",
+    dimmentions: {
+      width: 3933,
+      height: 5891,
+    },
+    size: 10000,
+    image: {
+      src: "https://images.pexels.com/photos/9507099/pexels-photo-9507099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Black and White Floral Padded Brown Wooden Framed Armchair",
+    },
+    bestseller: true,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Egg Balloon",
+    category: "food",
+    price: 93.89,
+    currency: "USD",
+    dimmentions: {
+      width: 7742,
+      height: 6690,
+    },
+    size: 7350,
+    image: {
+      src: "https://images.pexels.com/photos/14038038/pexels-photo-14038038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Close Up Photo of Dish on White Ceramic Plate",
+    },
+    bestseller: false,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Man",
+    category: "people",
+    price: 100,
+    currency: "USD",
+    dimmentions: {
+      width: 4769,
+      height: 3179,
+    },
+    size: 8190,
+    image: {
+      src: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Person Standing Near Lake",
+    },
+    bestseller: false,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Architecture",
+    category: "landmarks",
+    price: 101,
+    currency: "USD",
+    dimmentions: {
+      width: 6016,
+      height: 4016,
+    },
+    size: 1220,
+    image: {
+      src: "https://images.pexels.com/photos/911758/pexels-photo-911758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Long Exposure Photography White Dome Building Interior",
+    },
+    bestseller: false,
+    featured: false,
+    details: null,
+  },
+  {
+    name: "Samurai King Restling",
+    category: "Pets",
+    price: 101,
+    currency: "USD",
+    image: {
+      src: "https://images.pexels.com/photos/4032590/pexels-photo-4032590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "A Roaring Lion",
+    },
+    bestseller: false,
+    featured: true,
+    details: {
+      dimmentions: {
+        width: 4704,
+        height: 5466,
+      },
+      size: 18,
+      description:
+        "So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book. So how did the classical Latin become so incoherent? According to McClintock.",
+      recommendations: [
+        {
+          src: "https://images.pexels.com/photos/911758/pexels-photo-911758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Long Exposure Photography White Dome Building Interior",
+        },
+        {
+          src: "https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Person Standing Near Lake",
+        },
+        {
+          src: "https://images.pexels.com/photos/14038038/pexels-photo-14038038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          alt: "Close Up Photo of Dish on White Ceramic Plate",
+        },
+      ],
+    },
+  },
+];
