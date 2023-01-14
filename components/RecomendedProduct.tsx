@@ -8,13 +8,13 @@ function RecomendedProduct() {
         .filter((p) => p.featured === true)
         .map((p, i) => (
           <div key={i}>
-            <div className="flex justify-between pl-10 pt-10 pr-10">
-              <div className="text-3xl font-bold">{p.name}</div>
-              <button className="bg-black text-white pt-2 pb-2 pl-5 pr-5 font-semibold">
+            <div className="flex sm:justify-between justify-center sm:pl-20 pt-10 sm:pr-20">
+              <div className="text-xl md:text-2xl font-bold">{p.name}</div>
+              <button className="bg-black hidden sm:flex text-white pl-2 pr-2 pt-2 pb-2 md:pl-5 md:pr-5 font-semibold text-sm md:text-lg">
                 ADD TO CART
               </button>
             </div>
-            <div className="h-2/4 w-1/2 flex pt-10 m-auto relative text-center">
+            <div className="h-2/4 w-3/4 sm:w-1/2 flex pt-10 m-auto relative text-center">
               <Image
                 src={p.image.src}
                 alt={p.image.alt}
@@ -25,8 +25,14 @@ function RecomendedProduct() {
                 Photo of the day
               </p>
             </div>
-            <div className="flex justify-between p-10">
-              <div className="w-1/2">
+            <div className="flex justify-center pt-5">
+              <button className="bg-black text-white content-center w-3/4 pt-2 pb-2 font-semibold text-md md:hidden">
+                ADD TO CART
+              </button>
+            </div>
+
+            <div className="flex lg:flex-row flex-col justify-between p-10 lg:pr-20 lg:pl-20 pt-10">
+              <div className="lg:w-1/2">
                 <h3 className="font-bold">About the {p.name}</h3>
                 <p className="mt-2 text-slate-400 font-semibold">
                   {p.category}
@@ -34,20 +40,22 @@ function RecomendedProduct() {
                 <p className="mt-4 ">{p.details?.description}</p>
               </div>
               <div>
-                <h3 className="font-bold text-right">People also buy</h3>
+                <h3 className="font-bold lg:text-right  pt-4 lg:p-0">
+                  People also buy
+                </h3>
                 <div className="flex">
                   {p.details?.recommendations.map((r, i) => (
-                    <div key={i} className="pl-5 mt-5">
-                      <Image src={r.src} alt={r.alt} width={128} height={0} />
+                    <div key={i} className="lg:pl-5 pr-4 mt-5 ">
+                      <Image src={r.src} alt={r.alt} width={160} height={0} />
                     </div>
                   ))}
                 </div>
-                <h4 className="text-right pt-5 font-bold">Details</h4>
-                <p className="text-right text-slate-400">
+                <h4 className="lg:text-right pt-5 font-bold">Details</h4>
+                <p className="lg:text-right text-slate-400">
                   Size: {p.details?.dimmentions.height} x{" "}
                   {p.details?.dimmentions.width} pixel
                 </p>
-                <p className="text-right text-slate-400">
+                <p className="lg:text-right text-slate-400">
                   Size: {p.details?.size} mb
                 </p>
               </div>
