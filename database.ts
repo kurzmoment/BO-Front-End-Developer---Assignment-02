@@ -1,7 +1,7 @@
 export const products = [
   {
     name: "Red Bench",
-    category: "people",
+    category: "People",
     price: 3.89,
     currency: "USD",
     dimmentions: {
@@ -19,7 +19,7 @@ export const products = [
   },
   {
     name: "Red Bench",
-    category: "people",
+    category: "People",
     price: 3.89,
     currency: "USD",
     dimmentions: {
@@ -37,7 +37,7 @@ export const products = [
   },
   {
     name: "Red Bench",
-    category: "people",
+    category: "People",
     price: 3.89,
     currency: "USD",
     dimmentions: {
@@ -55,7 +55,7 @@ export const products = [
   },
   {
     name: "Red Bench",
-    category: "people",
+    category: "People",
     price: 3.89,
     currency: "USD",
     dimmentions: {
@@ -73,7 +73,7 @@ export const products = [
   },
   {
     name: "Red Bench",
-    category: "people",
+    category: "People",
     price: 3.89,
     currency: "USD",
     dimmentions: {
@@ -91,7 +91,7 @@ export const products = [
   },
   {
     name: "Egg Balloon",
-    category: "food",
+    category: "Food",
     price: 93.89,
     currency: "USD",
     dimmentions: {
@@ -109,7 +109,7 @@ export const products = [
   },
   {
     name: "Man",
-    category: "people",
+    category: "People",
     price: 100,
     currency: "USD",
     dimmentions: {
@@ -127,7 +127,7 @@ export const products = [
   },
   {
     name: "Architecture",
-    category: "landmarks",
+    category: "Landmarks",
     price: 101,
     currency: "USD",
     dimmentions: {
