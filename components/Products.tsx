@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Filters from "./Filters";
+import ProductsShowcase from "./ProductsShowcase";
 
 function Products() {
   return (
@@ -23,8 +24,11 @@ function Products() {
           <Image src={"./Slider.svg"} alt={"slider"} width={30} height={30} />
         </button>
       </div>
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row ">
         <Filters />
+        <div className="flex-1 ">
+          <ProductsShowcase />
+        </div>
       </div>
     </div>
   );

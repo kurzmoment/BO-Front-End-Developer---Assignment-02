@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { products } from "../database";
 
 function Filters() {
   var uniqueFilterEntries = Array.from(
     new Set(products.map((item) => item.category))
   );
+  const [visible, setVisible] = useState(false);
 
   return (
-    <div className="pl-20 pt-10">
+    <div className="sm:pl-20 sm:pt-10 hidden sm:block">
       <h4 className="text-lg font-bold">Category</h4>
       {uniqueFilterEntries.map((p, i) => (
         <div key={i} className="flex gap-x-3 content-center pt-2  ">
