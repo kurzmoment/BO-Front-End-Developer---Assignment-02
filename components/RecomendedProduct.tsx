@@ -45,8 +45,16 @@ function RecomendedProduct() {
                 </h3>
                 <div className="flex">
                   {p.details?.recommendations.map((r, i) => (
-                    <div key={i} className="lg:pl-5 pr-4 mt-5 ">
-                      <Image src={r.src} alt={r.alt} width={160} height={0} />
+                    <div
+                      key={i}
+                      className="mt-5 m-2 relative w-full sm:h-52 h-24 aspect-square fill-current overflow-hidden "
+                    >
+                      <Image
+                        src={r.src}
+                        alt={r.alt}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   ))}
                 </div>
