@@ -58,7 +58,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "Black bike",
+    name: "Black Bike",
     category: "Transport",
     price: 14.89,
     currency: "USD",
@@ -115,7 +115,7 @@ export const products = [
   },
   {
     id: 7,
-    name: "Happy friends",
+    name: "Happy Friends",
     category: "Lifestyle",
     price: 31.89,
     currency: "USD",

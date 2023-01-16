@@ -5,6 +5,7 @@ import Pagination from "./Pagination";
 import { paginate } from "@/helpers/paginate";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
+import { GetServerSideProps } from "next";
 
 function ProductsShowcase() {
   const dispatch = useDispatch();
@@ -69,3 +70,13 @@ function ProductsShowcase() {
 }
 
 export default ProductsShowcase;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const data = await fetch("http://192.168.0.109:3000/api/data", {
+    method: "GET",
+  });
+  console.log(data);
+  return {
+    props: JSON.parse(JSON.stringify(data)),
+  };
+};
