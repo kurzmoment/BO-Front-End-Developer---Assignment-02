@@ -29,7 +29,7 @@ function Navbar() {
         <div
           className={
             visible
-              ? " w-fit h-fit right-10 mt-[55px] p-2 bg-white absolute border border-slate-600"
+              ? "z-50 w-fit h-fit sm:right-10 right-0 mt-[55px]  p-2 bg-white absolute border border-slate-600"
               : "hidden"
           }
         >

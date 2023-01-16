@@ -22,21 +22,26 @@ function RecomendedProduct() {
                 ADD TO CART
               </button>
             </div>
-            <div className="h-2/4 w-3/4 sm:w-1/2 flex pt-10 m-auto relative text-center">
-              <Image
-                src={p.image.src}
-                alt={p.image.alt}
-                width={1260}
-                height={750}
-              />
-              <p className="absolute bg-white p-2 font-semibold bottom-0">
-                Photo of the day
-              </p>
+            {/* h-2/4 w-3/4 sm:w-1/2 flex pt-10 m-auto relative text-center */}
+            <div className="sm:p-20 p-10">
+              <div className="w-full sm:h-[800px] h-[400px] flex pt-10 relative text-center">
+                <Image
+                  src={p.image.src}
+                  alt={p.image.alt}
+                  fill
+                  className="object-cover"
+                  // width={1260}
+                  // height={750}
+                />
+                <p className="absolute bg-white p-2 font-semibold bottom-0">
+                  Photo of the day
+                </p>
+              </div>
             </div>
             <div className="flex justify-center pt-5">
               <a
                 onClick={() => dispatch(addToCart(p))}
-                className="bg-black text-white content-center w-3/4 pt-2 pb-2 font-semibold text-md md:hidden"
+                className="bg-black text-white text-center w-3/4 pt-2 pb-2 font-semibold text-md md:hidden"
               >
                 ADD TO CART
               </a>

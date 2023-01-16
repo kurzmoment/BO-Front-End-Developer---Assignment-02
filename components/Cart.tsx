@@ -19,18 +19,18 @@ function Cart() {
               key={i}
               className="flex justify-between items-center border-b-2 border-slate-400"
             >
-              <div className="cursor-pointer">
+              <div className="cursor-pointer absolute -mt-20">
                 <Image
                   onClick={() => dispatch(removeFromCart(item.id))}
                   src={"./x.svg"}
                   alt={"x"}
-                  width={15}
-                  height={15}
+                  width={20}
+                  height={20}
                 />
               </div>
               <div className="p-2">
                 <p className="font-bold text-xl">{item.name}</p>
-                <p className="font-bold text-lg text-slate-600">
+                <p className="font-bold text-lg text-slate-600 ">
                   ${item.price}
                 </p>
               </div>
@@ -39,7 +39,7 @@ function Cart() {
                   src={item.image.src}
                   alt={item.image.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover "
                 />
               </div>
             </div>
