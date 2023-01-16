@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart } from "@/redux/cart.slice";
+import { clearCart, removeFromCart } from "@/redux/cart.slice";
 
 function Cart() {
   const cart = useSelector((state: any) => state.cart);
@@ -19,6 +19,15 @@ function Cart() {
               key={i}
               className="flex justify-between items-center border-b-2 border-slate-400"
             >
+              <div className="cursor-pointer">
+                <Image
+                  onClick={() => dispatch(removeFromCart(item.id))}
+                  src={"./x.svg"}
+                  alt={"x"}
+                  width={15}
+                  height={15}
+                />
+              </div>
               <div className="p-2">
                 <p className="font-bold text-xl">{item.name}</p>
                 <p className="font-bold text-lg text-slate-600">
@@ -37,7 +46,7 @@ function Cart() {
           ))}
 
           <div
-            onClick={() => dispatch(removeFromCart(cart))}
+            onClick={() => dispatch(clearCart(cart))}
             className="cursor-pointer flex border-2 border-black mt-2 justify-center p-1 text-center"
           >
             <p className="w-full  text-lg font-bold">CLEAR</p>
