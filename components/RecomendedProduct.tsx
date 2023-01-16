@@ -23,7 +23,7 @@ function RecomendedProduct() {
               </button>
             </div>
             {/* h-2/4 w-3/4 sm:w-1/2 flex pt-10 m-auto relative text-center */}
-            <div className="sm:p-20 p-10">
+            <div className="sm:p-20 sm:pt-10 p-10">
               <div className="w-full sm:h-[800px] h-[400px] flex pt-10 relative text-center">
                 <Image
                   src={p.image.src}

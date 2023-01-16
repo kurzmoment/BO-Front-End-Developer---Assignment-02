@@ -16,6 +16,7 @@ function ProductsShowcase() {
   };
 
   const paginatedPosts = paginate(products, currentPage, pageSize);
+  console.log(paginatedPosts.filter((p) => p.bestseller === true));
 
   return (
     <div className="pt-10 sm:pl-20 pl-10 pr-10 sm:pr-20">
@@ -25,7 +26,9 @@ function ProductsShowcase() {
           .map((p, i) => (
             <div key={i} className="">
               <div className="relative">
-                {/* <p>Best Seller</p> */}
+                {p.bestseller === true && (
+                  <p className="text-lg ">Best Seller</p>
+                )}
                 <div className="relative w-full h-96 aspect-square fill-current overflow-hidden">
                   <Image
                     src={p.image.src}

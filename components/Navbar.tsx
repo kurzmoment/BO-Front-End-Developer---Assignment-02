@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Cart from "./Cart";
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [visible, setVisible] = useState(false);
+  const cart = useSelector((state: any) => state.cart);
+
   return (
     <nav className="">
       <div className="flex pl-10 pr-10 pt-10 justify-between">
@@ -22,14 +25,18 @@ function Navbar() {
           <Image
             src={"./shopping-cart.svg"}
             alt="shoping cart"
-            width={30}
-            height={30}
+            width={50}
+            height={50}
+            className="absolute right-14"
           />
+          <p className="absolute font-bold text-xs right-11 top-20 bg-black text-white p-1">
+            {cart.length}
+          </p>
         </div>
         <div
           className={
             visible
-              ? "z-50 w-fit h-fit sm:right-10 right-0 mt-[55px]  p-2 bg-white absolute border border-slate-600"
+              ? "z-50 w-fit h-fit sm:right-10 right-0 mt-[70px]  p-2 bg-white absolute border border-slate-600"
               : "hidden"
           }
         >
