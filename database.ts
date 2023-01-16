@@ -1,5 +1,6 @@
 export const products = [
   {
+    id: 1,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -18,6 +19,7 @@ export const products = [
     details: null,
   },
   {
+    id: 2,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -36,6 +38,7 @@ export const products = [
     details: null,
   },
   {
+    id: 3,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -54,6 +57,7 @@ export const products = [
     details: null,
   },
   {
+    id: 4,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -72,6 +76,7 @@ export const products = [
     details: null,
   },
   {
+    id: 5,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -90,6 +95,7 @@ export const products = [
     details: null,
   },
   {
+    id: 6,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -108,6 +114,7 @@ export const products = [
     details: null,
   },
   {
+    id: 7,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -126,6 +133,7 @@ export const products = [
     details: null,
   },
   {
+    id: 8,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -144,6 +152,7 @@ export const products = [
     details: null,
   },
   {
+    id: 9,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -162,6 +171,7 @@ export const products = [
     details: null,
   },
   {
+    id: 10,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -180,6 +190,7 @@ export const products = [
     details: null,
   },
   {
+    id: 11,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -198,6 +209,7 @@ export const products = [
     details: null,
   },
   {
+    id: 12,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -216,6 +228,7 @@ export const products = [
     details: null,
   },
   {
+    id: 13,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -234,6 +247,7 @@ export const products = [
     details: null,
   },
   {
+    id: 14,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -252,6 +266,7 @@ export const products = [
     details: null,
   },
   {
+    id: 15,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -270,6 +285,7 @@ export const products = [
     details: null,
   },
   {
+    id: 16,
     name: "Red Bench",
     category: "People",
     price: 3.89,
@@ -288,6 +304,7 @@ export const products = [
     details: null,
   },
   {
+    id: 17,
     name: "Egg Balloon",
     category: "Food",
     price: 93.89,
@@ -306,6 +323,7 @@ export const products = [
     details: null,
   },
   {
+    id: 18,
     name: "Man",
     category: "People",
     price: 100,
@@ -324,6 +342,7 @@ export const products = [
     details: null,
   },
   {
+    id: 19,
     name: "Architecture",
     category: "Landmarks",
     price: 101,
@@ -342,6 +361,7 @@ export const products = [
     details: null,
   },
   {
+    id: 20,
     name: "Samurai King Restling",
     category: "Pets",
     price: 101,

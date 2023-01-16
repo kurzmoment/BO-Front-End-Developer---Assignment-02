@@ -3,8 +3,11 @@ import { products } from "../database";
 import Image from "next/image";
 import Pagination from "./Pagination";
 import { paginate } from "@/helpers/paginate";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/cart.slice";
 
 function ProductsShowcase() {
+  const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize: number = 6;
 
@@ -31,7 +34,10 @@ function ProductsShowcase() {
                     className="object-cover"
                   />
                 </div>
-                <button className="bg-black w-full text-white pl-2 pr-2 pt-2 pb-2 font-semibold text-lg text-center absolute bottom-0">
+                <button
+                  onClick={() => dispatch(addToCart(p))}
+                  className="bg-black w-full text-white pl-2 pr-2 pt-2 pb-2 font-semibold text-lg text-center absolute bottom-0"
+                >
                   ADD TO CART
                 </button>
               </div>

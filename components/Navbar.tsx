@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Cart from "./Cart";
 
 function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -32,17 +33,7 @@ function Navbar() {
               : "hidden"
           }
         >
-          <div className="flex">
-            <p className="text-lg font-bold">Your cart is empty</p>
-            <Image
-              onClick={() => setVisible(false)}
-              src={"./x.svg"}
-              alt={"x"}
-              width={20}
-              height={20}
-              className={"cursor-pointer"}
-            />
-          </div>
+          <Cart />
         </div>
       </div>
       <div className="border-b-2 border border-slate-400 mt-10 b"></div>

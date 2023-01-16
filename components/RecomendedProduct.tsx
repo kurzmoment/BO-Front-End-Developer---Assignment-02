@@ -1,7 +1,12 @@
 import React from "react";
 import { products } from "../database";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cart.slice";
+
 function RecomendedProduct() {
+  const dispatch = useDispatch();
+
   return (
     <div>
       {products
@@ -10,7 +15,10 @@ function RecomendedProduct() {
           <div key={i}>
             <div className="flex sm:justify-between justify-center sm:pl-20 pt-10 sm:pr-20">
               <div className="text-xl md:text-2xl font-bold">{p.name}</div>
-              <button className="bg-black hidden sm:flex text-white pl-2 pr-2 pt-2 pb-2 md:pl-5 md:pr-5 font-semibold text-sm md:text-lg">
+              <button
+                onClick={() => dispatch(addToCart(p))}
+                className="bg-black hidden sm:flex text-white pl-2 pr-2 pt-2 pb-2 md:pl-5 md:pr-5 font-semibold text-sm md:text-lg"
+              >
                 ADD TO CART
               </button>
             </div>
@@ -26,9 +34,12 @@ function RecomendedProduct() {
               </p>
             </div>
             <div className="flex justify-center pt-5">
-              <button className="bg-black text-white content-center w-3/4 pt-2 pb-2 font-semibold text-md md:hidden">
+              <a
+                onClick={() => dispatch(addToCart(p))}
+                className="bg-black text-white content-center w-3/4 pt-2 pb-2 font-semibold text-md md:hidden"
+              >
                 ADD TO CART
-              </button>
+              </a>
             </div>
 
             <div className="flex lg:flex-row flex-col justify-between p-10 lg:pr-20 lg:pl-20 pt-10">
