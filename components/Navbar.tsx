@@ -9,7 +9,7 @@ function Navbar() {
 
   return (
     <nav className="">
-      <div className="flex pl-10 pr-10 pt-10 justify-between">
+      <div className="flex sm:pl-20 pl-10 pr-10 pt-10 justify-between">
         <div>
           <Image
             src={"./Group.svg"}
@@ -19,7 +19,7 @@ function Navbar() {
           />
         </div>
         <div
-          className="cursor-pointer"
+          className="cursor-pointer pr-"
           onClick={() => (visible ? setVisible(false) : setVisible(true))}
         >
           <Image
@@ -27,9 +27,9 @@ function Navbar() {
             alt="shoping cart"
             width={50}
             height={50}
-            className="absolute right-14"
+            className="absolute sm:right-20 right-10"
           />
-          <p className="absolute font-bold text-xs right-11 top-20 bg-black text-white p-1">
+          <p className="absolute font-bold text-xs sm:right-20 top-20 bg-black text-white p-1">
             {cart.length}
           </p>
         </div>
