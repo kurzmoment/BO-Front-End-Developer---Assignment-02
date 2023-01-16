@@ -26,10 +26,12 @@ function ProductsShowcase() {
           .map((p, i) => (
             <div key={i} className="">
               <div className="relative">
-                {p.bestseller === true && (
-                  <p className="text-lg ">Best Seller</p>
-                )}
                 <div className="relative w-full h-96 aspect-square fill-current overflow-hidden">
+                  {p.bestseller === true && (
+                    <p className="text-lg z-50 absolute bg-white p-1">
+                      Best Seller
+                    </p>
+                  )}
                   <Image
                     src={p.image.src}
                     alt={p.image.alt}
