@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { clearCart, removeFromCart } from "@/redux/cart.slice";
@@ -7,7 +7,6 @@ function Cart() {
   const cart = useSelector((state: any) => state.cart);
   const dispatch = useDispatch();
 
-  console.log(cart);
   return (
     <div className="flex">
       {cart.length === 0 ? (

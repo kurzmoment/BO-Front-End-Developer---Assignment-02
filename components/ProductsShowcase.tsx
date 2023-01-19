@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { products } from "../database";
 import Image from "next/image";
 import Pagination from "./Pagination";
 import { paginate } from "@/helpers/paginate";

@@ -43,7 +43,7 @@ function Filters({ visible, chooseCategory, category }: Props) {
         <div className="flex gap-x-3 pt-2 content-center">
           <input
             type="checkbox"
-            name="lower"
+            name="price_range"
             id="lower"
             className="accent-slate-900 rounded "
           />
@@ -54,7 +54,7 @@ function Filters({ visible, chooseCategory, category }: Props) {
         <div className="flex gap-x-3 pt-2 content-center">
           <input
             type="checkbox"
-            name="stbetween"
+            name="price_range"
             id="stbetween"
             className="accent-slate-900 rounded "
           />
@@ -65,7 +65,7 @@ function Filters({ visible, chooseCategory, category }: Props) {
         <div className="flex gap-x-3 pt-2 content-center">
           <input
             type="checkbox"
-            name="ndbetween"
+            name="price_range"
             id="ndbetween"
             className="accent-slate-900 rounded "
           />
@@ -76,7 +76,7 @@ function Filters({ visible, chooseCategory, category }: Props) {
         <div className="flex gap-x-3 pt-2 content-center">
           <input
             type="checkbox"
-            name="more"
+            name="price_range"
             id="more"
             className="accent-slate-900 rounded "
           />

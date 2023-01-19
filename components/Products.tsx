@@ -3,6 +3,7 @@ import Image from "next/image";
 import Filters from "./Filters";
 import ProductsShowcase from "./ProductsShowcase";
 import { products } from "@/database";
+import { sorter } from "@/helpers/sorter";
 
 function Products() {
   const [visible, setVisible] = useState(false);
@@ -20,29 +21,8 @@ function Products() {
     setCategory((prevState) => [...prevState, category]);
   };
 
-  console.log(category);
   useEffect(() => {
-    let sortingProducts = products.filter(
-      (p) => p.name.toLowerCase().indexOf(filters.s.toLowerCase()) >= 0
-    );
-    if (filters.sort === "price") {
-      sortingProducts.sort((a, b) => {
-        const diff = a.price - b.price;
-        if (diff === 0) return 0;
-        const sign = Math.abs(diff) / diff;
-        return filters.sort === "price" ? sign : -sign;
-      });
-    } else {
-      sortingProducts.sort((a, b) => {
-        if (a.name < b.name) {
-          return -1;
-        }
-        if (a.name > b.name) {
-          return 1;
-        }
-        return 0;
-      });
-    }
+    let sortingProducts = sorter(products, filters);
     setFilteredProducts(
       category.length > 1
         ? sortingProducts.filter((a) => {
