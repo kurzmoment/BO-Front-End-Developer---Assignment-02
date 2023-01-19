@@ -11,10 +11,10 @@ function Products() {
     sort: "",
   });
   const [filteredProducts, setFilteredProducts] = useState<{}>([]);
-  const [category, setCategory] = useState<string[]>([]);
+  const [category, setCategory] = useState<string[]>([""]);
 
   const chooseCategory = (category: string): void => {
-    if (category === "clear") {
+    if (category === "") {
       setCategory([]);
     }
     setCategory((prevState) => [...prevState, category]);
@@ -44,7 +44,7 @@ function Products() {
       });
     }
     setFilteredProducts(
-      category.length !== 1
+      category.length > 1
         ? sortingProducts.filter((a) => {
             if (category.includes(a.category)) {
               return a;

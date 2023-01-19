@@ -87,7 +87,7 @@ function Filters({ visible, chooseCategory, category }: Props) {
       </div>
       <div
         className="flex justify-center w-full border-2 border-black m-2 cursor-pointer"
-        onClick={() => chooseCategory("clear")}
+        onClick={() => chooseCategory("")}
       >
         <p className="m-2 font-bold">Clear</p>
       </div>
