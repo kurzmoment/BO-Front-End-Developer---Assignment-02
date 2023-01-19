@@ -5,41 +5,6 @@ import Pagination from "./Pagination";
 import { paginate } from "@/helpers/paginate";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
-// import { GetServerSideProps } from "next";
-
-type Props = {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  currency: string;
-  dimmentions: {
-    width: string;
-    height: string;
-  };
-  size: number;
-  image: {
-    src: string;
-    alt: string;
-  };
-  bestseller: boolean;
-  featured: boolean;
-
-  details?: {
-    dimmentions: {
-      width: number;
-      height: number;
-    };
-    size: number;
-    description: string;
-    recommendations: [
-      {
-        src: string;
-        alt: string;
-      }
-    ];
-  };
-};
 
 function ProductsShowcase(props: any) {
   const dispatch = useDispatch();
@@ -49,12 +14,12 @@ function ProductsShowcase(props: any) {
   const onPageChange = (page: number) => {
     setCurrentPage(page);
   };
+
   const paginatedPosts = paginate(
     props.filteredProducts,
     currentPage,
     pageSize
   );
-  console.log(paginatedPosts);
 
   return (
     <div className="pt-10 sm:pl-20 pl-10 pr-10 sm:pr-20">
@@ -97,7 +62,7 @@ function ProductsShowcase(props: any) {
       </div>
       <div>
         <Pagination
-          items={products.length}
+          items={props.filteredProducts.length}
           currentPage={currentPage}
           pageSize={pageSize}
           onPageChange={onPageChange}

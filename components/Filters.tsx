@@ -3,9 +3,11 @@ import { products } from "../database";
 
 type Props = {
   visible?: boolean;
+  chooseCategory: (arg: string) => void;
+  category: string[] | undefined;
 };
 
-function Filters({ visible }: Props) {
+function Filters({ visible, chooseCategory, category }: Props) {
   var uniqueFilterEntries = Array.from(
     new Set(products.map((item) => item.category))
   );
@@ -22,9 +24,11 @@ function Filters({ visible }: Props) {
       {uniqueFilterEntries.map((p, i) => (
         <div key={i} className="flex gap-x-3 content-center pt-2  ">
           <input
+            onChange={() => chooseCategory(p)}
             type="checkbox"
             name={p}
             id={p}
+            checked={category?.includes(p) ? true : false}
             className="accent-slate-900 rounded "
           />
           <label htmlFor={p} className="flex text-lg">
@@ -80,6 +84,12 @@ function Filters({ visible }: Props) {
             More than $200
           </label>
         </div>
+      </div>
+      <div
+        className="flex justify-center w-full border-2 border-black m-2 cursor-pointer"
+        onClick={() => chooseCategory("clear")}
+      >
+        <p className="m-2 font-bold">Clear</p>
       </div>
     </div>
   );

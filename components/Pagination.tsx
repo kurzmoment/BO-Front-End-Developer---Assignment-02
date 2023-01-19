@@ -1,6 +1,4 @@
 import React from "react";
-import { NumberLiteralType } from "typescript";
-import Image from "next/image";
 
 type Props = {
   items: number;

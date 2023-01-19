@@ -5,14 +5,22 @@ import ProductsShowcase from "./ProductsShowcase";
 import { products } from "@/database";
 
 function Products() {
-  const pageSize: number = 6;
   const [visible, setVisible] = useState(false);
   const [filters, setFilters] = useState({
     s: "",
     sort: "",
   });
   const [filteredProducts, setFilteredProducts] = useState<{}>([]);
+  const [category, setCategory] = useState<string[]>([]);
 
+  const chooseCategory = (category: string): void => {
+    if (category === "clear") {
+      setCategory([]);
+    }
+    setCategory((prevState) => [...prevState, category]);
+  };
+
+  console.log(category);
   useEffect(() => {
     let sortingProducts = products.filter(
       (p) => p.name.toLowerCase().indexOf(filters.s.toLowerCase()) >= 0
@@ -26,17 +34,25 @@ function Products() {
       });
     } else {
       sortingProducts.sort((a, b) => {
-        if (a.name > b.name) {
-          console.log("RETURN 1 | -1");
-          return filters.sort === "alphabetically" ? -1 : 1;
-        } else {
-          console.log("RETURN 0");
-          return 0;
+        if (a.name < b.name) {
+          return -1;
         }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
       });
     }
-    setFilteredProducts(sortingProducts);
-  }, [filters]);
+    setFilteredProducts(
+      category.length !== 1
+        ? sortingProducts.filter((a) => {
+            if (category.includes(a.category)) {
+              return a;
+            }
+          })
+        : sortingProducts
+    );
+  }, [filters, category]);
 
   const sort = (sort: string) => {
     setFilters({
@@ -70,13 +86,31 @@ function Products() {
           </a>
         </div>
         <div className="sm:hidden">
-          <Filters visible={visible} />
+          <Filters
+            visible={visible}
+            chooseCategory={chooseCategory}
+            category={category}
+          />
+          <div className="flex pt-4 gap-x-3 self-center">
+            <p className="text-slate-500 font-md">Sort By</p>
+            <select
+              name="sort"
+              id="sort"
+              onChange={(e) => sort(e.target.value)}
+            >
+              <option value="price">Price</option>
+              <option value="alphabetically ">Alphabetically</option>
+            </select>
+          </div>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row ">
-        <Filters />
+        <Filters chooseCategory={chooseCategory} category={category} />
         <div className="flex-1 ">
-          <ProductsShowcase filteredProducts={filteredProducts} />
+          <ProductsShowcase
+            filteredProducts={filteredProducts}
+            category={category}
+          />
         </div>
       </div>
     </div>
